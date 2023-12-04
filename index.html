@@ -182,37 +182,40 @@ p.exl {
 <hr>
   <h4>Conference Powerpoint: Has the James Webb Space Telescope disproven our current model on cosmological evolution? </h4>
   <script>
-    //Array of slide image URLs
+  
     var slideImages = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg", "slide5.jpg"];
     var currentSlide = 0;
-    function showSlide() {
-      document.getElementById('slide').src = slideImages[currentSlide];
+    
+    function showslide() {
+      document.getElementById('slide').src = slideimages[currentSlide];
     }
+    
     function nextSlide() {
-      currentSlide = (currentSlide + 1) % slideImage.length;
-      showSlide();
+      currentSlide = (currentSlide + 1) % slideimage.length;
+      showslide();
     }
+    
     function prevSlide() {
-      currentSlide = (currentSlide - 1 + slideImage.length) % slideImage.length;
-      showSlide();
+      currentSlide = (currentSlide - 1 + slideImage.length) % slideimage.length;
+      showslide();
     }
-    //Function to show specific slide based on button clicked
+    
     function showSlideNumber(slideNumber) {
       currentSlide = slideNumber - 1;
-      showSlide();
+      showslide();
     }
     // Call showSlide() to display the first slide
-    showSlide();
+    showslide();
   </script>
 
   <div id="slide-container">
     <img id="slide" src="slide1.jpg" alt="Slide 1" style="width:100%; max-width:800px;">
-    <!-- Previous and Next buttons container -->
+  
     <div class="button-container">
       <button class="button" onclick="prevSlide()">Previous</button>
       <button class="button" onclick="nextSlide()">Next</button>
     </div>
-    <!-- Slide number buttons container -->
+   
     <div class="slide-number-container">
       <button class="button" onclick="showSlideNumber(1)"></button> <button class="button" onclick="showSlideNumber(2)"></button> <button class="button" onclick="showSlideNumber(3)"> </button> <button class="button" onclick="showSlideNumber(4)"></button> <button class="button" onclick="showSlideNumber(5)"></button>
     </div>
