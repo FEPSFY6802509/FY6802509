@@ -191,12 +191,12 @@ p.exl {
     }
     
     function nextSlide() {
-      currentSlide = ("currentSlide + 1") % slideimage.length;
+      currentSlide = (currentSlide + 1) % slideimage.length;
       showslide();
     }
     
     function prevSlide() {
-      currentSlide = ("currentSlide - 1 + slideimage.length") % slideimage.length;
+      currentSlide = (currentSlide - 1 + slideimage.length) % slideimage.length;
       showslide();
     }
     
